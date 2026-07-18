@@ -4,30 +4,25 @@ import { getToken } from "../utils/auth";
 
 const API = axios.create({
 
-    baseURL:"http://localhost:5000/api"
+    baseURL:"https://social-post-composer-api.onrender.com/api"
 
 });
-
 
 
 API.interceptors.request.use(
     
     (config)=>{
 
-
-        const token=getToken();
-
+        const token = getToken();
 
         if(token){
 
-            config.headers.Authorization=
+            config.headers.Authorization =
             `Bearer ${token}`;
 
         }
 
-
         return config;
-
 
     },
 
@@ -38,7 +33,6 @@ API.interceptors.request.use(
     }
 
 );
-
 
 
 export default API;
