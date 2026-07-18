@@ -380,6 +380,20 @@ https://social-post-composer-api.onrender.com/
 
 ---
 
+# 🎯 Learning Outcomes
+
+- Developed a complete MERN stack application from frontend to backend
+- Learned React component-based architecture and state management
+- Implemented REST API development using Node.js and Express.js
+- Integrated MongoDB Atlas for cloud database storage
+- Implemented secure authentication using JWT and bcrypt
+- Learned frontend and backend communication using Axios
+- Implemented CRUD operations for managing posts
+- Learned deployment workflow using Vercel and Render
+- Understood environment variable management for production applications
+
+---
+
 # 👨‍💻 Developer
 
 **Navadeep**
