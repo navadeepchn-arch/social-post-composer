@@ -1,0 +1,353 @@
+.dashboard {
+
+    min-height:100vh;
+
+}
+
+
+
+.dashboard-container {
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:40px 0;
+
+}
+
+
+
+.hero-card {
+
+
+    background:white;
+
+    border:1px solid #e5e7eb;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    margin-bottom:30px;
+
+
+}
+
+
+
+.hero-card h1 {
+
+
+    font-size:38px;
+
+
+}
+
+
+
+
+.dashboard-grid {
+
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:25px;
+
+
+}
+
+
+
+
+
+.post-box,
+.posts-container {
+
+
+    background:white;
+
+    border:1px solid #e5e7eb;
+
+    border-radius:20px;
+
+    padding:25px;
+
+
+}
+
+
+
+
+
+.post-box input,
+.post-box textarea {
+
+
+    width:100%;
+
+    padding:14px;
+
+    margin-bottom:15px;
+
+    border-radius:12px;
+
+    border:1px solid #ddd;
+
+
+}
+
+
+
+
+
+.counter {
+
+
+    font-size:13px;
+
+    color:#64748b;
+
+    margin-bottom:15px;
+
+
+}
+
+
+
+
+
+.platform-grid {
+
+
+    display:flex;
+
+    gap:10px;
+
+    flex-wrap:wrap;
+
+    margin-top:15px;
+
+
+}
+
+
+
+
+
+.platform {
+
+
+    padding:10px 16px;
+
+    border-radius:12px;
+
+    border:1px solid #ddd;
+
+    cursor:pointer;
+
+
+}
+
+
+
+.platform input {
+
+
+    display:none;
+
+
+}
+
+
+
+.platform.selected {
+
+
+    background:#111827;
+
+    color:white;
+
+
+}
+
+
+
+
+
+.publish-btn {
+
+
+    width:100%;
+
+    margin-top:20px;
+
+    padding:14px;
+
+    border-radius:12px;
+
+    background:#111827;
+
+    color:white;
+
+    border:none;
+
+    cursor:pointer;
+
+
+}
+
+
+
+
+
+.post-card {
+
+
+    margin-top:20px;
+
+    padding:20px;
+
+    border-radius:16px;
+
+    border:1px solid #e5e7eb;
+
+
+}
+
+
+
+
+
+.tags span {
+
+
+    display:inline-block;
+
+    padding:6px 12px;
+
+    margin-right:8px;
+
+    border-radius:20px;
+
+    background:#eef2ff;
+
+    font-size:13px;
+
+
+}
+
+
+
+
+
+.message {
+
+
+    margin-top:15px;
+
+    color:#16a34a;
+
+
+}
+
+
+
+
+@media(max-width:900px){
+
+
+.dashboard-grid{
+
+
+grid-template-columns:1fr;
+
+
+}
+
+
+
+.hero-card h1{
+
+
+font-size:28px;
+
+
+}
+
+
+}
+.navbar{
+
+height:70px;
+
+display:flex;
+
+justify-content:flex-end;
+
+align-items:center;
+
+padding:0 5%;
+
+background:white;
+
+border-bottom:1px solid #eee;
+
+}
+
+
+.logout-btn{
+
+background:#111827;
+
+color:white;
+
+padding:10px 20px;
+
+border-radius:10px;
+
+}
+
+
+
+.media-upload{
+
+display:block;
+
+padding:12px;
+
+border:1px dashed #999;
+
+border-radius:12px;
+
+cursor:pointer;
+
+margin-bottom:15px;
+
+}
+
+
+.media-upload input{
+
+display:none;
+
+}
+
+
+.media-preview{
+
+width:120px;
+
+height:120px;
+
+object-fit:cover;
+
+border-radius:12px;
+
+margin-bottom:15px;
+
+}
