@@ -2,32 +2,66 @@
 
 A full-stack MERN application that allows users to create, validate, and manage social media posts for multiple platforms with secure authentication and database persistence.
 
-## 🌐 Live Demo
+---
 
-Frontend (Vercel):
+# 🌐 Live Demo
+
+Frontend:
 https://social-post-composer-six.vercel.app/
 
-Backend API (Render):
+Backend API:
 https://social-post-composer-api.onrender.com/
+
+---
+
+# 🔑 Demo Account
+
+Use the following credentials to access the application:
+
+```
+Email:
+navadeep@gmail.com
+
+Password:
+123456
+```
+
+Demo Flow:
+
+```
+Login
+  |
+  v
+Dashboard
+  |
+  v
+Create Post
+  |
+  v
+Publish Post
+  |
+  v
+View Saved Posts
+```
 
 ---
 
 # 📌 Project Overview
 
-Social Post Composer is a MERN stack based web application built to simplify the process of creating and managing social media content.
+Social Post Composer is a MERN stack web application designed to simplify creating and managing social media content.
 
-The application allows users to securely login, create posts, select multiple social media platforms, validate content based on platform limits, and store posts permanently using MongoDB Atlas.
+The application allows users to securely authenticate, create posts, select multiple social media platforms, validate content according to platform limits, and store posts permanently using MongoDB Atlas.
 
-The project demonstrates full-stack development including frontend UI, REST API development, authentication, database operations, and cloud deployment.
+The project demonstrates complete full-stack development including React frontend, Express REST APIs, JWT authentication, MongoDB database operations, and cloud deployment.
 
 ---
 
 # 🚀 Features
 
-## 🔐 User Authentication
+## 🔐 Authentication
 
-- User registration
-- User login
+- User Registration
+- User Login
 - JWT-based authentication
 - Password hashing using bcrypt
 - Protected API routes
@@ -40,8 +74,8 @@ The project demonstrates full-stack development including frontend UI, REST API 
 - Create new social media posts
 - Add post title and content
 - Select multiple platforms
-- Real-time character validation
-- Platform-specific character limits
+- Real-time character counting
+- Platform-specific validation
 - Publish posts
 
 ---
@@ -49,8 +83,8 @@ The project demonstrates full-stack development including frontend UI, REST API 
 ## 📋 Post Management
 
 - Store posts in MongoDB Atlas
-- Retrieve user-specific posts
-- Display published posts
+- Retrieve published posts
+- User-specific post access
 - Persistent cloud database storage
 
 ---
@@ -77,7 +111,7 @@ The project demonstrates full-stack development including frontend UI, REST API 
 
 ## Authentication
 
-- JSON Web Token (JWT)
+- JWT (JSON Web Token)
 - bcryptjs
 
 ## Deployment
@@ -89,122 +123,143 @@ The project demonstrates full-stack development including frontend UI, REST API 
 
 # 🏗️ System Architecture
 
-                User
+```
+                         User
 
-                  |
-                  |
+                          |
+                          v
 
-          React Frontend
-              (Vercel)
+                  React Frontend
+                     (Vercel)
 
-                  |
+                          |
+                          v
 
-            Axios Requests
+                   Axios Requests
 
-                  |
+                          |
+                          v
 
-         Express REST API
-              (Render)
+                 Express REST API
+                    (Render)
 
-                  |
+                          |
+                          v
 
-      JWT Authentication Layer
+             JWT Authentication Layer
 
-                  |
+                          |
+                          v
 
-          MongoDB Atlas
+                  MongoDB Atlas
+```
 
 ---
 
 # 📂 Project Structure
 
-
+```
 social-post-composer/
 
 │
 ├── client/
-│ │
-│ ├── src/
-│ │ │
-│ │ ├── components/
-│ │ │ Navbar.jsx
-│ │ │ PostForm.jsx
-│ │ │ PostList.jsx
-│ │ │
-│ │ ├── pages/
-│ │ │ Login.jsx
-│ │ │ Register.jsx
-│ │ │ Dashboard.jsx
-│ │ │
-│ │ ├── services/
-│ │ │ api.js
-│ │ │
-│ │ ├── utils/
-│ │ │ auth.js
-│ │ │
-│ │ ├── App.jsx
-│ │ └── main.jsx
-│ │
-│ └── package.json
+│
+│   ├── src/
+│   │
+│   │   ├── components/
+│   │   │
+│   │   │   ├── Navbar.jsx
+│   │   │   ├── PostForm.jsx
+│   │   │   └── PostList.jsx
+│   │
+│   │   ├── pages/
+│   │   │
+│   │   │   ├── Login.jsx
+│   │   │   ├── Register.jsx
+│   │   │   └── Dashboard.jsx
+│   │
+│   │   ├── services/
+│   │   │
+│   │   │   └── api.js
+│   │
+│   │   ├── utils/
+│   │   │
+│   │   │   └── auth.js
+│   │
+│   │   ├── App.jsx
+│   │   └── main.jsx
+│   │
+│   └── package.json
 │
 │
 ├── server/
-│ │
-│ ├── config/
-│ │ db.js
-│ │
-│ ├── controllers/
-│ │ authController.js
-│ │ postController.js
-│ │
-│ ├── middleware/
-│ │ authMiddleware.js
-│ │
-│ ├── models/
-│ │ User.js
-│ │ Post.js
-│ │
-│ ├── routes/
-│ │ authRoutes.js
-│ │ postRoutes.js
-│ │
-│ ├── server.js
-│ └── package.json
+│
+│   ├── config/
+│   │
+│   │   └── db.js
+│   │
+│   ├── controllers/
+│   │
+│   │   ├── authController.js
+│   │   └── postController.js
+│   │
+│   ├── middleware/
+│   │
+│   │   └── authMiddleware.js
+│   │
+│   ├── models/
+│   │
+│   │   ├── User.js
+│   │   └── Post.js
+│   │
+│   ├── routes/
+│   │
+│   │   ├── authRoutes.js
+│   │   └── postRoutes.js
+│   │
+│   ├── server.js
+│   └── package.json
 │
 └── README.md
-
+```
 
 ---
 
 # 🔐 Authentication Flow
 
-
+```
 User Registration
 
-    |
+        |
+        v
 
 Password Hashing using bcrypt
 
-    |
+        |
+        v
 
 Store User in MongoDB
 
-    |
+        |
+        v
 
 User Login
 
-    |
+        |
+        v
 
 Generate JWT Token
 
-    |
+        |
+        v
 
 Store Token in Client
 
-    |
+        |
+        v
 
 Access Protected APIs
-
+```
 
 ---
 
@@ -223,17 +278,19 @@ Access Protected APIs
 
 ## Authentication Routes
 
+```
+POST   /api/auth/register
 
-POST /api/auth/register
-POST /api/auth/login
-
+POST   /api/auth/login
+```
 
 ## Post Routes
 
+```
+POST   /api/posts
 
-POST /api/posts
-GET /api/posts
-
+GET    /api/posts
+```
 
 Protected routes require JWT authentication.
 
@@ -245,61 +302,78 @@ Protected routes require JWT authentication.
 
 ```bash
 git clone https://github.com/navadeepchn-arch/social-post-composer.git
-Backend Setup
+```
+
+---
+
+# Backend Setup
+
+```bash
 cd server
 
 npm install
 
 npm start
+```
 
-Create a .env file inside the server folder:
+Create a `.env` file inside the server folder:
 
+```env
 PORT=5000
 
 MONGO_URI=your_mongodb_connection_string
 
 JWT_SECRET=your_jwt_secret
-Frontend Setup
+```
+
+---
+
+# Frontend Setup
+
+```bash
 cd client
 
 npm install
 
 npm run dev
+```
 
 Frontend runs on:
 
+```
 http://localhost:5173
-☁️ Deployment
-Frontend Deployment
+```
 
-Deployed using:
+---
 
+# ☁️ Deployment
+
+## Frontend Deployment
+
+Platform:
+
+```
 Vercel
+```
 
 Live URL:
 
+```
 https://social-post-composer-six.vercel.app/
+```
 
-Backend Deployment
+---
 
-Deployed using:
+## Backend Deployment
 
+Platform:
+
+```
 Render
+```
 
 API URL:
 
+```
 https://social-post-composer-api.onrender.com/
-
-🎯 Learning Outcomes
-MERN stack application development
-React component architecture
-REST API creation
-JWT authentication implementation
-MongoDB CRUD operations
-Frontend and backend integration
-Cloud deployment workflow
-👨‍💻 Author
-
-Navadeep
-
-Social Post Composer - MERN Stack Project
+```
