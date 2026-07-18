@@ -377,3 +377,11 @@ API URL:
 ```
 https://social-post-composer-api.onrender.com/
 ```
+
+---
+
+# 👨‍💻 Developer
+
+**Navadeep**
+
+MERN Stack Project
